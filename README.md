@@ -39,7 +39,7 @@ curl -X GET 'http://localhost:8080/api/prices?date=2020-06-14-15.00.00&brandId=1
 
 ## Requirements
 
-| Id  | Taks                                                                                                                                      | Status |
+| Id  | Tasks                                                                                                                                     | Status |
 |-----|-------------------------------------------------------------------------------------------------------------------------------------------|--------|
 | 1   | Build a SpringBoot application/service that provides a rest query endpoint                                                                | Done   |
 | 2   | The endpoint must accept as input parameters: Application Date, Product Identifier, String Identifier                                     | Done   |
