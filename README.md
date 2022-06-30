@@ -4,7 +4,7 @@ Open API: [api.yaml](https://github.com/aljrubior/java-prices-api/blob/main/src/
 
 Note: You can use https://editor.swagger.io/ to view the Prices Open API definition.
 
-## Retrieve a price
+### Retrieve a price
 
 ```
 GET /api/prices
@@ -34,6 +34,8 @@ GET /api/prices
 ```
 curl -X GET 'http://localhost:8080/api/prices?date=2020-06-14-15.00.00&brandId=1&productId=35455'
 ```
+
+---
 
 ## Requirements
 
