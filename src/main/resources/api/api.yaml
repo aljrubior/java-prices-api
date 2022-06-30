@@ -1,0 +1,74 @@
+---
+openapi: 3.0.1
+info:
+  title: OpenAPI definition
+  version: v0
+servers:
+  - url: http://localhost:8080
+    description: Generated server url
+paths:
+  "/api/prices":
+    get:
+      tags:
+        - price-controller
+      summary: Retrieve the price associated for given date, productId and brandId
+      operationId: getPrices
+      parameters:
+        - name: date
+          in: query
+          required: true
+          schema:
+            type: string
+            format: date-time
+        - name: brandId
+          in: query
+          required: true
+          schema:
+            type: integer
+            format: int32
+        - name: productId
+          in: query
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/Price"
+components:
+  schemas:
+    Price:
+      type: object
+      properties:
+        brandId:
+          type: integer
+          description: The brand identifier
+          format: int32
+          example: 1
+        productId:
+          type: integer
+          description: the product identifier
+          format: int64
+          example: 35455
+        priceList:
+          type: integer
+          description: The identifier of the applicable price rate.
+          format: int32
+          example: 35455
+        startDate:
+          type: string
+          description: The start date and time that applies the indicated rate price.
+          format: date-time
+        endDate:
+          type: string
+          description: The end date and time that applies the indicated rate price.
+          format: date-time
+        price:
+          type: number
+          description: The final sale price
+          format: double
+          example: 35.5
